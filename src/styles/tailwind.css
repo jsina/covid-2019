@@ -591,6 +591,26 @@ video {
   height: auto;
 }
 
+@font-face {
+  font-family: IRANSans;
+
+  src: url(../fonts/IRANSansWeb.woff) format("woff");
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+input,
+textarea {
+  font-family: IRANSans;
+}
+
 .container {
   width: 100%;
 }
