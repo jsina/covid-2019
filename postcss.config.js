@@ -1,15 +1,8 @@
 const purgecss = require("@fullhuman/postcss-purgecss")({
-  content: ["./public/**/*.html"],
+  content: ["./public/**/*.html", "./src/**/*.jsx", "./src/**/*.js"],
   defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
 });
 
 module.exports = {
-  plugins: [
-    require("tailwindcss"),
-    require("autoprefixer"),
-    ...[purgecss, require("cssnano")]
-    // ...(process.env.NODE_ENV === "production"
-    //   ? [purgecss, require("cssnano")]
-    //   : [])
-  ]
+  plugins: [require("tailwindcss"), require("autoprefixer"), ...[purgecss]]
 };
