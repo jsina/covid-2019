@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import covid from "novelcovid";
 
-export function useFetch(country = "United States") {
+export function useFetch(country = "iran") {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState();
   const [error, setError] = useState(false);
